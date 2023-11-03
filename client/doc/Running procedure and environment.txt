@@ -1,0 +1,14 @@
+所写的 FTP client 位于 client.c 中，其中：
+-- 测试时的运行环境：Linux 虚拟环境
+-- 操作系统：Ubuntu-20.04-64bits
+-- 运行方式：
+   1. 预先可以运行 gcc -Wall -o server server.c 和 gcc -Wall -o client client.c
+   2. 运行 server，若有指定的根目录和端口号，可通过 -root 和 -port 参数传入
+   3. 使用 ./client ip n 运行 client，其中 ip 为 server 的 ip 地址，n 为运行 
+       server 时使用的端口号，若运行 server 时不指定，默认为 21
+   4. client 运行成功后，可以看到 server 发来的 weilcome message
+-- 使用方式：
+   1. 直接在命令行输入想要使用的 FTP 指令，格式为 CODE args，其中 CODE 
+      为 FTP 的指令助记符，例：USER、PASS、PORT 等，args 为指令所需参数
+   2. 输入指令后回车，即可接收来自 server 的响应
+   3. 若想结束 client，使用 QUIT 即可

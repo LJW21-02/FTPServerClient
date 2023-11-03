@@ -1,0 +1,3 @@
+How to write a chat program (two clients chat with each other) with UDP?
+
+First, we need to create UDP socket for each client. Then, set up server with another socket. The two clients will chat through server. They send messages to the server through sockets, and the server will act as an intermediary to pass the message to the other client. Also, use while loop to make sure that the two clients can continuously send messages. Finally, to differentiate purposes of messages, we can design some codes, ex: CHAT to send messages, QUIT to end conversation.
